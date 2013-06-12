@@ -1,0 +1,20 @@
+
+{
+    "repositories": {
+        "serbanghita": {
+            "type": "package",
+            "package": {
+                "name": "serbanghita/Mobile-Detect",
+                "version": "2.6.2",
+                "source": {
+                    "url": "https://github.com/serbanghita/Mobile-Detect",
+                    "type": "git",
+                    "reference": "2.6.2"
+                }
+            }
+        }
+    },
+    "require": {
+        "serbanghita/Mobile-Detect": "2.6.2"
+    }
+}
