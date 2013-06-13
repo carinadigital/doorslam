@@ -21,7 +21,12 @@ $querystring =  isset($parse_url['query']) ? $parse_url['query'] : '' ;
 
 switch ($path) {
   case '/goal':
-    print $twig->render('goal.tmpl', array());
+    if ($querystring != 'goal') {
+      //redirect to homepage
+      header("Location: \ ");
+    } else {
+      print $twig->render('goal.tmpl', array());
+    }
     break;
   default:
     print $twig->render('index.tmpl', array());
