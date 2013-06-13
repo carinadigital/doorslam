@@ -20,8 +20,12 @@ $path = $parse_url['path'];
 $querystring =  $parse_url['query'];
 
 
-// You are trying to reach http://domain.com/goal
-if ($path == '/goal') {
-  print $twig->render('goal.tmpl', array());
+switch ($path) {
+  case '/goal':
+    print $twig->render('goal.tmpl', array());
+    break;
+  default:
+    print $twig->render('index.tmpl', array());
+    break;
 }
 
