@@ -1,5 +1,4 @@
 <?php
-
 require_once 'vendor/serbanghita/Mobile-Detect/Mobile_Detect.php';
 require_once 'vendor/twig/twig/lib/Twig/Autoloader.php';
 Twig_Autoloader::register();
@@ -17,7 +16,7 @@ $twig = new Twig_Environment($loader, array(
 
 $parse_url = parse_url($_SERVER['REQUEST_URI']);
 $path = $parse_url['path'];
-$querystring =  $parse_url['query'];
+$querystring =  isset($parse_url['query']) ? $parse_url['query'] : '' ;
 
 
 switch ($path) {
